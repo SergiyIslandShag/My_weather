@@ -14,10 +14,10 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Today</a>
+                        <a class="nav-link active" href="#" onclick="showTodayForecast()">Today</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">5-day forecast</a>
+                        <a class="nav-link" href="#" onclick="showForecast()">5-day forecast</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -124,6 +124,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="forecast-content" style="display: none;">
+        <!-- Вміст для 5 денної погоди -->
+        <!-- <h5>5-day forecast content will appear here</h5> -->
     </div>
 
     <script src="./script.js"></script>
