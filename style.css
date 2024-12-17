@@ -59,3 +59,72 @@ h5 {
 .weather-item:last-child {
     border-right: none;
 }
+
+.forecast-day-block {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.forecast-day-block:hover,
+.forecast-day-block.selected {
+    background-color: #e0f7fa;
+    border: 2px solid blue;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.hourly-block {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    transition: transform 0.3s;
+}
+
+.hourly-block:hover {
+    transform: scale(1.05);
+    background-color: #e0f7fa;
+}
+
+#forecast-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.container {
+    display: block;
+}
+
+.forecast-day-block.selected {
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+}
+
+#hourly-forecast {
+    margin-top: 20px;
+    display: none;
+}
+
+#hourly-details {
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #666;
+}

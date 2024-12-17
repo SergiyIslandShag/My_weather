@@ -14,14 +14,14 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" onclick="showTodayForecast()">Today</a>
+                        <a class="nav-link" href="#" onclick="showTodayForecast()">Today</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="showForecast()">5-day forecast</a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Rivne, Ukraine">
+                    <input class="form-control me-2" type="search" placeholder="New York, USA">
                     <button class="btn btn-secondary" type="submit">Search</button>
                 </form>
             </div>
@@ -92,7 +92,7 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="city-block text-center p-2 border rounded">
-                        <p style="font-weight: bold;">Lutsk</p>
+                        <p style="font-weight: bold;">Paris</p>
                         <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
                             alt="Sunny">
                         <p>36°C</p>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="col-6">
                     <div class="city-block text-center p-2 border rounded">
-                        <p style="font-weight: bold;">Ternopil</p>
+                        <p style="font-weight: bold;">Berlin</p>
                         <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
                             alt="Sunny">
                         <p>36°C</p>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-6">
                     <div class="city-block text-center p-2 border rounded">
-                        <p style="font-weight: bold;">Khmelnytskyi</p>
+                        <p style="font-weight: bold;">Madrid</p>
                         <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
                             alt="Sunny">
                         <p>29°C</p>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="col-6">
                     <div class="city-block text-center p-2 border rounded">
-                        <p style="font-weight: bold;">Lviv</p>
+                        <p style="font-weight: bold;">Rome</p>
                         <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
                             alt="Sunny">
                         <p>29°C</p>
@@ -126,10 +126,76 @@
         </div>
     </div>
 
-    <div id="forecast-content" style="display: none;">
-        <!-- Вміст для 5 денної погоди -->
-        <!-- <h5>5-day forecast content will appear here</h5> -->
-    </div>
+    <div id="forecast-content" class="container mt-4">
+        <h5 class="title-left">5-DAY FORECAST</h5>
+        <div class="row text-center mb-4">
+            <div class="col forecast-day-block p-2 border rounded" onclick="selectDayForecast(this)" data-day="day1">
+                <p style="font-weight: bold;">SUN</p>
+                <p>JUL 01</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                <p>40°C</p>
+                <p style="font-weight: bold;">Clear, Warm</p>
+            </div>
+            <div class="col forecast-day-block p-2 border rounded" onclick="selectDayForecast(this)" data-day="day2">
+                <p style="font-weight: bold;">MON</p>
+                <p>JUL 02</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                <p>35°C</p>
+                <p style="font-weight: bold;">Clear, Warm</p>
+            </div>
+            <div class="col forecast-day-block p-2 border rounded" onclick="selectDayForecast(this)" data-day="day3">
+                <p style="font-weight: bold;">TUE</p>
+                <p>JUL 03</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                <p>38°C</p>
+                <p style="font-weight: bold;">Clear, Warm</p>
+            </div>
+            <div class="col forecast-day-block p-2 border rounded" onclick="selectDayForecast(this)" data-day="day4">
+                <p style="font-weight: bold;">WED</p>
+                <p>JUL 04</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                <p>36°C</p>
+                <p style="font-weight: bold;">Clear, Warm</p>
+            </div>
+        </div>
+    
+        <div class="block">
+            <h5 class="title-left">HOURLY</h5>
+            <div class="row text-center">
+                <div class="col weather-item">
+                    <p style="font-weight: bold">7pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                    <p>Forecast: <strong>Sunny</strong></p>
+                    <p>Temp: <strong>29°C</strong></p>
+                    <p>Feels Like: <strong>30°C</strong></p>
+                    <p>Wind: <strong>10 km/h</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">8pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                    <p>Forecast: <strong>Sunny</strong></p>
+                    <p>Temp: <strong>28°C</strong></p>
+                    <p>Feels Like: <strong>29°C</strong></p>
+                    <p>Wind: <strong>8 km/h</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">9pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Clear</strong></p>
+                    <p>Temp: <strong>28°C</strong></p>
+                    <p>Feels Like: <strong>28°C</strong></p>
+                    <p>Wind: <strong>7 km/h</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">10pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Clear</strong></p>
+                    <p>Temp: <strong>27°C</strong></p>
+                    <p>Feels Like: <strong>27°C</strong></p>
+                    <p>Wind: <strong>6 km/h</strong></p>
+                </div>
+            </div>
+        </div>
 
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
