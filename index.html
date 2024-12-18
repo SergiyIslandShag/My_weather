@@ -20,7 +20,7 @@
                         <a class="nav-link" href="#" onclick="showForecast()">5-day forecast</a>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <form id="weather-form" class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="New York, USA">
                     <button class="btn btn-secondary" type="submit">Search</button>
                 </form>
@@ -84,6 +84,22 @@
                     <p>Feels Like: <strong>27°C</strong></p>
                     <p>Wind: <strong>6 km/h</strong></p>
                 </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">11pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Clear</strong></p>
+                    <p>Temp: <strong>26°C</strong></p>
+                    <p>Feels Like: <strong>26°C</strong></p>
+                    <p>Wind: <strong>5 km/h</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">12am</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Clear</strong></p>
+                    <p>Temp: <strong>25°C</strong></p>
+                    <p>Feels Like: <strong>25°C</strong></p>
+                    <p>Wind: <strong>4 km/h</strong></p>
+                </div>
             </div>
         </div>
 
@@ -129,6 +145,13 @@
     <div id="forecast-content" class="container mt-4">
         <h5 class="title-left">5-DAY FORECAST</h5>
         <div class="row text-center mb-4">
+            <div class="col forecast-day-block p-2 border rounded" onclick="selectDayForecast(this)" data-day="day1">
+                <p style="font-weight: bold;">TONIGHT</p>
+                <p>JUN 30</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                <p>25°C</p>
+                <p style="font-weight: bold;">Clear, Warm</p>
+            </div>
             <div class="col forecast-day-block p-2 border rounded" onclick="selectDayForecast(this)" data-day="day1">
                 <p style="font-weight: bold;">SUN</p>
                 <p>JUL 01</p>
@@ -193,6 +216,22 @@
                     <p>Temp: <strong>27°C</strong></p>
                     <p>Feels Like: <strong>27°C</strong></p>
                     <p>Wind: <strong>6 km/h</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">11pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Clear</strong></p>
+                    <p>Temp: <strong>26°C</strong></p>
+                    <p>Feels Like: <strong>26°C</strong></p>
+                    <p>Wind: <strong>5 km/h</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">12am</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Clear</strong></p>
+                    <p>Temp: <strong>25°C</strong></p>
+                    <p>Feels Like: <strong>25°C</strong></p>
+                    <p>Wind: <strong>4 km/h</strong></p>
                 </div>
             </div>
         </div>
