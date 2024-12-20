@@ -66,32 +66,6 @@ function printCurrent(data) {
         </div>`;
 }
 
-function printHourly(data) {
-    const hourlyContainer = document.getElementById("container");
-    hourlyContainer.innerHTML = hourlyContainer.innerHTML.split('<h5 class="title-left">HOURLY</h5>')[0];
-    hourlyContainer.innerHTML += `
-        <h5 class="title-left">HOURLY</h5>
-        <div class="row text-center">
-            ${data.hourly.slice(0, 6).map((hour) => {
-                const hourDate = new Date(hour.dt * 1000);
-                const hours = hourDate.getHours();
-                const isPM = hours >= 12;
-                const formattedHour = `${hours > 12 ? hours - 12 : hours}${isPM ? ' PM' : ' AM'}`;
-                return `
-                    <div class="col weather-item">
-                        <p style ="font-weight: bold">${formattedHour}</p>
-                        <img src="https://openweathermap.org/img/wn/${hour.weather[0].icon}.png" class="weather-icon" alt="Weather">
-                        <p>Forecast: <strong>${hour.weather[0].description}</strong></p>
-                        <p>Temp: <strong>${Math.round(hour.temp)}°C</strong></p>
-                        <p>Feels Like: <strong>${Math.round(hour.feels_like)}°C</strong></p>
-                        <p>Wind: <strong>${hour.wind_speed} km/h</strong></p>
-                    </div>`;
-            }).join('')}
-        </div>`;
-}
-
-
-function displayWeather(currentData, hourlyData) {
+function displayWeather(currentData) {
     printCurrent(currentData);
-    printHourly(hourlyData);
 }
