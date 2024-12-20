@@ -1,0 +1,123 @@
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.block {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+h5 {
+    font-weight: bold;
+    color: blue;
+}
+
+h6 {
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.current-weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-weather-center {
+    text-align: center;
+}
+
+.city-block {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.weather-item {
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.weather-item:last-child {
+    border-right: none;
+}
+
+.forecast-day-block {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.forecast-day-block:hover,
+.forecast-day-block.selected {
+    background-color: #e0f7fa;
+    border: 2px solid blue;
+}
+
+.forecast-day-block.selected {
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+}
+
+.hourly-block {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    transition: transform 0.3s;
+}
+
+.hourly-block:hover {
+    transform: scale(1.05);
+    background-color: #e0f7fa;
+}
+
+#forecast-content {
+    margin-top: 20px;
+}
+
+.container {
+    display: block;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #666;
+}

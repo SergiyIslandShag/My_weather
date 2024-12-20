@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MY WEATHER</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Today" onclick="showTodayForecast()">Today</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/5-day forecast" onclick="showForecast()">5-day forecast</a>
+                    </li>
+                </ul>
+                <form id="weather-form" class="d-flex">
+                    <input id="city-search" class="form-control me-2" type="search" placeholder="Enter city:">
+                    <button id="btn-search" class="btn btn-secondary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="block" id="container">
+            <h5 class="title-left">CURRENT WEATHER</h5>
+            <div class="current-weather-info d-flex justify-content-between align-items-center">
+                <div class="text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sunny" class="weather-icon">
+                    <p style="font-weight: bold; color: black; margin: 0;">Loading...</p>
+                </div>
+                <div class="current-weather-center text-center">
+                    <p class="temperature" style="font-size: 2rem;">Loading...</p>
+                    <p>Real Feel: Loading...</p>
+                </div>
+                <div class="text-right">
+                    <p style="font-weight: bold; color: blue; margin-bottom: 10px;">Loading...</p>
+                    <p>Sunrise: <strong>Loading...</strong></p>
+                    <p>Sunset: <strong>Loading...</strong></p>
+                    <p>Duration: <strong>Loading...</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" id="container">
+            <h5 class="title-left">HOURLY</h5>
+            <div class="row text-center">
+                <div class="col weather-item">
+                    <p style="font-weight: bold">7pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                    <p>Forecast: <strong>Loading...</strong></p>
+                    <p>Temp: <strong>Loading...</strong></p>
+                    <p>Feels Like: <strong>Loading...</strong></p>
+                    <p>Wind: <strong>Loading...</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">8pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon" alt="Sunny">
+                    <p>Forecast: <strong>Loading...</strong></p>
+                    <p>Temp: <strong>Loading...</strong></p>
+                    <p>Feels Like: <strong>Loading...</strong></p>
+                    <p>Wind: <strong>Loading...</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">9pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Loading...</strong></p>
+                    <p>Temp: <strong>Loading...</strong></p>
+                    <p>Feels Like: <strong>Loading...</strong></p>
+                    <p>Wind: <strong>Loading...</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">10pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Loading...</strong></p>
+                    <p>Temp: <strong>Loading...</strong></p>
+                    <p>Feels Like: <strong>Loading...</strong></p>
+                    <p>Wind: <strong>Loading...</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">11pm</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Loading...</strong></p>
+                    <p>Temp: <strong>Loading...</strong></p>
+                    <p>Feels Like: <strong>Loading...</strong></p>
+                    <p>Wind: <strong>Loading...</strong></p>
+                </div>
+                <div class="col weather-item">
+                    <p style="font-weight: bold">12am</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="weather-icon" alt="Clear">
+                    <p>Forecast: <strong>Loading...</strong></p>
+                    <p>Temp: <strong>Loading...</strong></p>
+                    <p>Feels Like: <strong>Loading...</strong></p>
+                    <p>Wind: <strong>Loading...</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" id="container">
+            <h5 class="title-left">NEARBY PLACES</h5>
+            <h6 class="title-left">COMING SOON</h6>
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="city-block text-center p-2 border rounded">
+                        <p style="font-weight: bold;">Loading...</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
+                            alt="Sunny">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="city-block text-center p-2 border rounded">
+                        <p style="font-weight: bold;">Loading...</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
+                            alt="Sunny">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="city-block text-center p-2 border rounded">
+                        <p style="font-weight: bold;">Loading...</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
+                            alt="Sunny">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="city-block text-center p-2 border rounded">
+                        <p style="font-weight: bold;">Loading...</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="weather-icon"
+                            alt="Sunny">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

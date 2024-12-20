@@ -1,6 +1,7 @@
 body {
     background-color: #f8f9fa;
     color: #333;
+    font-family: Arial, sans-serif;
 }
 
 .block {
@@ -16,6 +17,12 @@ h5 {
     color: blue;
 }
 
+h6 {
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
 .temperature {
     font-size: 2.5rem;
     font-weight: bold;
@@ -24,8 +31,8 @@ h5 {
 }
 
 .weather-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: block;
     margin: 0 auto;
 }
@@ -54,6 +61,7 @@ h5 {
 .weather-item {
     border-right: 1px solid #ccc;
     padding: 10px;
+    text-align: center;
 }
 
 .weather-item:last-child {
@@ -76,9 +84,10 @@ h5 {
     border: 2px solid blue;
 }
 
-.weather-icon {
-    width: 50px;
-    height: 50px;
+.forecast-day-block.selected {
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
 }
 
 .hourly-block {
@@ -96,27 +105,11 @@ h5 {
 }
 
 #forecast-content {
-    display: none;
     margin-top: 20px;
 }
 
 .container {
     display: block;
-}
-
-.forecast-day-block.selected {
-    background-color: blue;
-    color: white;
-    border: 2px solid blue;
-}
-
-#hourly-forecast {
-    margin-top: 20px;
-    display: none;
-}
-
-#hourly-details {
-    margin-top: 10px;
 }
 
 h3 {
